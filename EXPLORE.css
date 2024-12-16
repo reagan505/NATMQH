@@ -1,0 +1,177 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif; /* Changed font */
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #f4f4f4, #e2e2e2); /* Soft gradient background */
+}
+
+/* Header Styles */
+header {
+  background-color: #3498db; /* Lighter blue header */
+  color: #fff;
+  padding: 40px 0; /* Increased padding for more space */
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  animation: slideIn 0.5s ease-out; /* Slide-in animation */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #f39c12; /* Yellow hover color */
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #00bcd4;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.header-content h1 {
+  font-size: 3rem; /* Larger heading */
+  margin-bottom: 10px;
+  animation: fadeIn 0.5s ease-out; /* Fade-in animation */
+}
+
+/* Services Section Styles */
+.services-section {
+  padding: 40px 20px;
+  background-image: url(./mansion.webp);
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.service-card {
+  background: #fff;
+  border: 2px solid #3498db; /* Border on service cards */
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Larger shadow */
+  text-align: center;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: fadeIn 0.5s ease-out; /* Fade-in animation for cards */
+}
+
+.service-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Enhanced hover effect */
+}
+
+.service-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  font-size: 1.8rem; /* Larger card titles */
+  margin: 15px 0;
+}
+
+.service-card p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 30px; /* More space below text */
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-image: url(./land.webp); /* Darker footer color */
+  color: white;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .header-content h1 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+
+  .services-section h2 {
+    font-size: 2rem; /* Smaller heading on mobile */
+  }
+
+  .service-card h3 {
+    font-size: 1.3rem; /* Smaller titles on mobile */
+  }
+
+  .service-card p {
+    font-size: 1rem; /* Smaller text on mobile */
+  }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

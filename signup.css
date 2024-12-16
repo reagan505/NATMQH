@@ -1,0 +1,121 @@
+/* Background styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif; /* Updated font for a modern look */
+  background-image: url('./mansion.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Sign-up form styling */
+.signup-form {
+  background-color: rgba(239, 230, 230, 0.2); /* Slightly more visible background */
+  border: 1px solid rgba(252, 252, 252, 0.4);
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for the form */
+}
+
+/* Header text */
+.signup-form h1 {
+  margin: 0 0 30px;
+  padding: 0;
+  color: #ffffff;
+  font-size: 28px; /* Larger header for emphasis */
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Input field styles */
+.signup-form .user-input {
+  position: relative;
+}
+
+.user {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 2px solid #ffffff;
+  outline: none;
+  background-color: transparent;
+  transition: border-color 0.3s ease;
+}
+
+.user:focus {
+  border-color: #00bcd4; /* Focus color */
+}
+
+.signup-form .user-input label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding: 0 0 10px;
+  font-size: 16px;
+  color: #ffffff;
+  pointer-events: none;
+  transition: 0.3s ease;
+  transform: translateY(-50%); /* Center label vertically */
+}
+
+.signup-form .user:focus ~ label,
+.signup-form .user:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #00bcd4; /* Color change on focus */
+  font-size: 14px;
+}
+
+/* Password visibility toggle */
+.show-password {
+  color: #ffffff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Submit button styles */
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #007b8f;
+  transform: scale(1.05); /* Slight scale on hover */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 480px) {
+  .signup-form {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .signup-form h1 {
+    font-size: 24px;
+  }
+}

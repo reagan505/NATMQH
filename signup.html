@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - NATMQH</title>
+  <link rel="stylesheet" href="./signup.css">
+</head>
+
+<body>
+  <div class="background">
+    <div class="signup-form">
+      <h1>Sign Up</h1>
+      <form action="">
+        <div class="user-input">
+          <input type="text" class="user" required id="usernameInput" placeholder=" ">
+          <label for="usernameInput">Username</label>
+        </div>
+        <div class="user-input">
+          <input type="email" class="user" required id="emailInput" placeholder=" ">
+          <label for="emailInput">Email</label>
+        </div>
+        <div class="user-input">
+          <input type="password" class="user" required id="passwordInput" placeholder=" ">
+          <label for="passwordInput">Password</label>
+        </div>
+        <div class="show-password">
+          <input type="checkbox" id="togglePassword"> Show password
+        </div>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const togglePassword = document.getElementById('togglePassword');
+    const passwordInput = document.getElementById('passwordInput');
+
+    togglePassword.addEventListener('change', () => {
+      if (togglePassword.checked) {
+        passwordInput.type = 'text';
+      } else {
+        passwordInput.type = 'password';
+      }
+    });
+  </script>
+</body>
+
+</html>
+
